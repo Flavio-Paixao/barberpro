@@ -38,7 +38,6 @@ class AgendamentoController extends Controller
     }
     public function store(Request $request)
     {
-        \Illuminate\Support\Facades\Log::info('[STORE] Iniciando agendamento', $request->all());
         $request->validate([
             'cliente_nome' => 'required|string|max:255',
             'cliente_telefone' => 'required|string|max:20',
@@ -59,6 +58,12 @@ class AgendamentoController extends Controller
             'status' => 'confirmado',
         ]);
         try {
+            $host = $request->getHost();
+            $subdominio = str_replace('.barberpro.tech', '', $host);
+            $tenantData = \App\Models\Tenant::on('sqlite')->where('subdominio', $subdominio)->first();
+            if (!$tenantData) { $tenantData = \DB::connection('sqlite')->table('tenants')->where('subdominio', $subdominio)->first(); }
+            $endereco = $tenantData->endereco ?? '';
+            \Illuminate\Support\Facades\Log::info('[ENDERECO] ' . $endereco);
             $whatsapp = new WhatsAppService();
             $dataFormatada = Carbon::parse($request->data)->format('d/m/Y');
             $whatsapp->confirmarAgendamento(
@@ -67,7 +72,8 @@ class AgendamentoController extends Controller
                 $barbeiro->nome,
                 $servico->nome,
                 $dataFormatada,
-                $request->horario
+                $request->horario,
+                $endereco
             );
             $whatsapp->notificarBarbearia(
                 $request->cliente_nome,

@@ -45,7 +45,7 @@ class WhatsAppService
     }
 }
 
-    public function confirmarAgendamento(string $telefone, string $clienteNome, string $barbeiro, string $servico, string $data, string $horario): bool
+    public function confirmarAgendamento(string $telefone, string $clienteNome, string $barbeiro, string $servico, string $data, string $horario, string $endereco = ''): bool
     {
         $mensagem = "Olá {$clienteNome}! 🎉\n\n";
         $mensagem .= "Seu agendamento foi confirmado!\n\n";
@@ -53,7 +53,7 @@ class WhatsAppService
         $mensagem .= "👨 Barbeiro: {$barbeiro}\n";
         $mensagem .= "📅 Data: {$data}\n";
         $mensagem .= "⏰ Horário: {$horario}\n";
-        $mensagem .= "📍 Local: " . env('BARBEARIA_ENDERECO') . "\n\n";
+        $mensagem .= "📍 Local: " . ($endereco ?: env('BARBEARIA_ENDERECO', 'A confirmar')) . "\n\n";
         $mensagem .= "Te esperamos! 💈";
 
         return $this->enviarMensagem($telefone, $mensagem);
