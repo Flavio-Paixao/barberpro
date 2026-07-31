@@ -10,9 +10,9 @@ class AgendamentoController extends Controller
 {
     public function index()
     {
-        $barbeiros = Barbeiro::where('ativo', true)->get();
+        $profissionals = Barbeiro::where('ativo', true)->get();
         $servicos = Servico::where('ativo', true)->get();
-        return view('agendamento', compact('barbeiros', 'servicos'));
+        return view('agendamento', compact('profissionals', 'servicos'));
     }
     public function horariosDisponiveis(Request $request)
     {

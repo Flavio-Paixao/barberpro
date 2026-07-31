@@ -164,7 +164,7 @@
       <span class="nav-logo">BARBER<span class="pro">PRO</span></span>
       <ul class="nav-links">
         <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#barbeiros">Barbeiros</a></li>
+        <li><a href="#profissionals">Profissionals</a></li>
         <li><a href="#como-funciona">Como Funciona</a></li>
       </ul>
       <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-green" style="padding:9px 18px;font-size:12px;">
@@ -185,7 +185,7 @@
           <span class="glitch" data-text="SEU CORTE" style="color:var(--blue-light)">SEU CORTE</span><br>
           <span class="glitch" data-text="ONLINE" style="color:var(--white)">ONLINE</span>
         </h1>
-        <p class="hero-desc">Sem espera, sem ligação. Escolha seu barbeiro favorito, o horário ideal e receba confirmação instantânea no WhatsApp.</p>
+        <p class="hero-desc">Sem espera, sem ligação. Escolha seu profissional favorito, o horário ideal e receba confirmação instantânea no WhatsApp.</p>
         <div class="hero-btns">
           <a href="#agendar" class="btn btn-red">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -204,7 +204,7 @@
           </div>
           <div>
             <div class="stat-num">3<span class="accent">+</span></div>
-            <div class="stat-label">Barbeiros</div>
+            <div class="stat-label">Profissionals</div>
           </div>
         </div>
       </div>
@@ -222,11 +222,11 @@
             <input class="form-input" type="tel" id="clienteTelefone" placeholder="(11) 99999-9999"/>
           </div>
           <div class="form-group">
-            <label class="form-label">Barbeiro</label>
-            <select class="form-select" id="barbeiroId" onchange="carregarHorarios()">
-              <option value="">Selecione o barbeiro</option>
-              @foreach($barbeiros as $barbeiro)
-                <option value="{{ $barbeiro->id }}">{{ $barbeiro->nome }}{{ $barbeiro->especialidade ? ' — ' . $barbeiro->especialidade : '' }}</option>
+            <label class="form-label">Profissional</label>
+            <select class="form-select" id="profissionalId" onchange="carregarHorarios()">
+              <option value="">Selecione o profissional</option>
+              @foreach($profissionals as $profissional)
+                <option value="{{ $profissional->id }}">{{ $profissional->nome }}{{ $profissional->especialidade ? ' — ' . $profissional->especialidade : '' }}</option>
               @endforeach
             </select>
           </div>
@@ -246,7 +246,7 @@
           <div class="form-group">
             <label class="form-label">Horário Disponível</label>
             <div id="timeGrid" class="time-grid">
-              <div class="time-loading">Selecione barbeiro, serviço e data</div>
+              <div class="time-loading">Selecione profissional, serviço e data</div>
             </div>
             <input type="hidden" id="horarioSelecionado"/>
           </div>
@@ -324,11 +324,11 @@
 
 <div class="divider"></div>
 
-<section id="barbeiros" style="background:var(--surface)">
+<section id="profissionals" style="background:var(--surface)">
   <div class="container">
     <div style="text-align:center;margin-bottom:48px">
       <div class="sec-badge">Nossa Equipe</div>
-      <h2 class="sec-title">NOSSOS <span>BARBEIROS</span></h2>
+      <h2 class="sec-title">NOSSOS <span>PROFISSIONALS</span></h2>
     </div>
     <div class="barbers-grid">
       <div class="barber-card">
@@ -367,8 +367,8 @@
     <div class="steps-grid">
       <div class="step">
         <div class="step-num red">1</div>
-        <div class="step-title">ESCOLHA O BARBEIRO</div>
-        <div class="step-desc">Selecione seu barbeiro favorito e o serviço desejado.</div>
+        <div class="step-title">ESCOLHA O PROFISSIONAL</div>
+        <div class="step-desc">Selecione seu profissional favorito e o serviço desejado.</div>
       </div>
       <div class="step">
         <div class="step-num blue">2</div>
@@ -424,20 +424,20 @@
   let horarioSelecionado = null;
 
   async function carregarHorarios() {
-    const barbeiroId = document.getElementById('barbeiroId').value;
+    const profissionalId = document.getElementById('profissionalId').value;
     const servicoId = document.getElementById('servicoId').value;
     const data = document.getElementById('data').value;
     const grid = document.getElementById('timeGrid');
 
-    if (!barbeiroId || !servicoId || !data) {
-      grid.innerHTML = '<div class="time-loading">Selecione barbeiro, serviço e data</div>';
+    if (!profissionalId || !servicoId || !data) {
+      grid.innerHTML = '<div class="time-loading">Selecione profissional, serviço e data</div>';
       return;
     }
 
     grid.innerHTML = '<div class="time-loading">Carregando horários...</div>';
 
     try {
-      const res = await fetch(`/horarios-disponiveis?barbeiro_id=${barbeiroId}&servico_id=${servicoId}&data=${data}`);
+      const res = await fetch(`/horarios-disponiveis?barbeiro_id=${profissionalId}&servico_id=${servicoId}&data=${data}`);
       const horarios = await res.json();
 
       if (horarios.length === 0) {
@@ -467,11 +467,11 @@
   async function confirmarAgendamento() {
     const nome = document.getElementById('clienteNome').value.trim();
     const tel = document.getElementById('clienteTelefone').value.trim();
-    const barbeiroId = document.getElementById('barbeiroId').value;
+    const profissionalId = document.getElementById('profissionalId').value;
     const servicoId = document.getElementById('servicoId').value;
     const data = document.getElementById('data').value;
 
-    if (!nome || !tel || !barbeiroId || !servicoId || !data || !horarioSelecionado) {
+    if (!nome || !tel || !profissionalId || !servicoId || !data || !horarioSelecionado) {
       alert('Preencha todos os campos!');
       return;
     }
@@ -490,7 +490,7 @@
         body: JSON.stringify({
           cliente_nome: nome,
           cliente_telefone: tel,
-          barbeiro_id: barbeiroId,
+          barbeiro_id: profissionalId,
           servico_id: servicoId,
           data: data,
           horario: horarioSelecionado,
@@ -506,10 +506,10 @@ if (result.sucesso) {
     // Limpa os campos para próximo agendamento
     document.getElementById('clienteNome').value = '';
     document.getElementById('clienteTelefone').value = '';
-    document.getElementById('barbeiroId').value = '';
+    document.getElementById('profissionalId').value = '';
     document.getElementById('servicoId').value = '';
     document.getElementById('data').value = '';
-    document.getElementById('timeGrid').innerHTML = '<div class="time-loading">Selecione barbeiro, serviço e data</div>';
+    document.getElementById('timeGrid').innerHTML = '<div class="time-loading">Selecione profissional, serviço e data</div>';
     horarioSelecionado = null;
     document.getElementById('btnAgendar').disabled = true;
     btn.textContent = 'Confirmar Agendamento';
@@ -530,10 +530,10 @@ function voltarInicio() {
     document.getElementById('bookingForm').style.display = 'block';
     document.getElementById('clienteNome').value = '';
     document.getElementById('clienteTelefone').value = '';
-    document.getElementById('barbeiroId').value = '';
+    document.getElementById('profissionalId').value = '';
     document.getElementById('servicoId').value = '';
     document.getElementById('data').value = '';
-    document.getElementById('timeGrid').innerHTML = '<div class="time-loading">Selecione barbeiro, serviço e data</div>';
+    document.getElementById('timeGrid').innerHTML = '<div class="time-loading">Selecione profissional, serviço e data</div>';
     horarioSelecionado = null;
     document.getElementById('btnAgendar').disabled = true;
 }

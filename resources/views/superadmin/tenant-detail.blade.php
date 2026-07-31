@@ -130,7 +130,7 @@
   <div class="stats-grid">
     <div class="stat-card blue"><div class="stat-label">Faturamento Total</div><div class="stat-value">R$ {{ number_format($faturamentoTotal, 0, ',', '.') }}</div></div>
     <div class="stat-card green"><div class="stat-label">Agendamentos</div><div class="stat-value">{{ $totalAgendamentos }}</div></div>
-    <div class="stat-card yellow"><div class="stat-label">Barbeiros</div><div class="stat-value">{{ $barbeiros->count() }}</div></div>
+    <div class="stat-card yellow"><div class="stat-label">Profissionals</div><div class="stat-value">{{ $profissionals->count() }}</div></div>
     <div class="stat-card red"><div class="stat-label">Mensalidade</div><div class="stat-value">R$ {{ number_format($tenant->mensalidade, 0, ',', '.') }}</div></div>
   </div>
 
@@ -178,7 +178,7 @@
 
   <div class="tabs">
     <button class="tab-btn active" data-tab="geral">Visão Geral</button>
-    <button class="tab-btn" data-tab="barbeiros">Barbeiros</button>
+    <button class="tab-btn" data-tab="profissionals">Profissionals</button>
     <button class="tab-btn" data-tab="servicos">Serviços</button>
     <button class="tab-btn" data-tab="agendamentos">Agendamentos</button>
     <button class="tab-btn" data-tab="financeiro">Financeiro</button>
@@ -258,12 +258,12 @@
     </div>
   </div>
 
-  <!-- BARBEIROS -->
-  <div class="tab-content" id="tab-barbeiros">
+  <!-- PROFISSIONALS -->
+  <div class="tab-content" id="tab-profissionals">
     <div class="panel">
-      <div class="panel-header"><span class="panel-title">ADICIONAR BARBEIRO</span></div>
+      <div class="panel-header"><span class="panel-title">ADICIONAR PROFISSIONAL</span></div>
       <div class="panel-body">
-        <form method="POST" action="/superadmin/tenants/{{ $tenant->id }}/barbeiros">
+        <form method="POST" action="/superadmin/tenants/{{ $tenant->id }}/profissionals">
           @csrf
           <div class="form-grid">
             <div class="form-group"><label class="form-label">Nome</label><input type="text" name="nome" class="form-input" required/></div>
@@ -271,18 +271,18 @@
             <div class="form-group"><label class="form-label">Início</label><input type="time" name="hora_inicio" class="form-input" value="09:00" required/></div>
             <div class="form-group"><label class="form-label">Fim</label><input type="time" name="hora_fim" class="form-input" value="18:00" required/></div>
           </div>
-          <button type="submit" class="btn btn-blue">+ Adicionar Barbeiro</button>
+          <button type="submit" class="btn btn-blue">+ Adicionar Profissional</button>
         </form>
       </div>
     </div>
 
     <div class="panel">
-      <div class="panel-header"><span class="panel-title">BARBEIROS CADASTRADOS</span></div>
-      @if($barbeiros->count() > 0)
+      <div class="panel-header"><span class="panel-title">PROFISSIONALS CADASTRADOS</span></div>
+      @if($profissionals->count() > 0)
       <table>
         <thead><tr><th>Foto</th><th>Nome</th><th>Especialidade</th><th>Horário</th><th>Status</th><th>Ações</th></tr></thead>
         <tbody>
-          @foreach($barbeiros as $b)
+          @foreach($profissionals as $b)
           <tr>
             <td style="width:80px">
               @if(!empty($b->foto))
@@ -290,7 +290,7 @@
               @else
               <div class="barber-avatar" style="margin-bottom:4px">{{ substr($b->nome,0,1) }}</div>
               @endif
-              <form method="POST" action="/superadmin/tenants/{{ $tenant->id }}/barbeiros/{{ $b->id }}/foto" enctype="multipart/form-data">
+              <form method="POST" action="/superadmin/tenants/{{ $tenant->id }}/profissionals/{{ $b->id }}/foto" enctype="multipart/form-data">
                 @csrf
                 <label class="foto-upload-label">
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
@@ -305,11 +305,11 @@
             <td><span class="status-dot {{ $b->ativo ? 'status-ativo' : 'status-inativo' }}"></span>{{ $b->ativo ? 'Ativo' : 'Inativo' }}</td>
             <td style="vertical-align:middle">
   <div style="display:flex;gap:6px">
-  <form method="POST" action="/superadmin/tenants/{{ $tenant->id }}/barbeiros/{{ $b->id }}/toggle">
+  <form method="POST" action="/superadmin/tenants/{{ $tenant->id }}/profissionals/{{ $b->id }}/toggle">
                 @csrf
                 <button type="submit" class="btn btn-outline btn-sm">{{ $b->ativo ? 'Desativar' : 'Ativar' }}</button>
               </form>
-              <form method="POST" action="/superadmin/tenants/{{ $tenant->id }}/barbeiros/{{ $b->id }}" onsubmit="return confirm('Remover este barbeiro?')">
+              <form method="POST" action="/superadmin/tenants/{{ $tenant->id }}/profissionals/{{ $b->id }}" onsubmit="return confirm('Remover este profissional?')">
                 @csrf @method('DELETE')
                 <button type="submit" class="btn btn-red-outline btn-sm">Remover</button>
               </form>
@@ -320,7 +320,7 @@
         </tbody>
       </table>
       @else
-      <div class="empty-state">Nenhum barbeiro cadastrado ainda.</div>
+      <div class="empty-state">Nenhum profissional cadastrado ainda.</div>
       @endif
     </div>
   </div>

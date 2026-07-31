@@ -69,7 +69,7 @@
     </div>
 
     <h2>1. SOBRE O <span>BARBERPRO</span></h2>
-    <p>O BarberPro é uma plataforma de agendamento online desenvolvida para barbearias. O sistema permite que clientes agendem horários com barbeiros de forma simples e rápida, recebendo confirmações automáticas via WhatsApp.</p>
+    <p>O BarberPro é uma plataforma de agendamento online desenvolvida para barbearias. O sistema permite que clientes agendem horários com profissionals de forma simples e rápida, recebendo confirmações automáticas via WhatsApp.</p>
     <p>O BarberPro é desenvolvido e mantido por <strong>Flávio da Paixão Nunes</strong>, com sede em Santos, SP, Brasil.</p>
 
     <h2>2. ACEITAÇÃO DOS <span>TERMOS</span></h2>
@@ -86,7 +86,7 @@
       <li><strong>Agendamento online:</strong> Clientes podem agendar horários 24 horas por dia, 7 dias por semana</li>
       <li><strong>Confirmação via WhatsApp:</strong> Notificações automáticas sobre agendamentos</li>
       <li><strong>Lembrete automático:</strong> Aviso enviado 20 minutos antes do horário agendado</li>
-      <li><strong>Painel administrativo:</strong> Gerenciamento de barbeiros, serviços e agendamentos</li>
+      <li><strong>Painel administrativo:</strong> Gerenciamento de profissionals, serviços e agendamentos</li>
     </ul>
 
     <h2>4. RESPONSABILIDADES DO <span>CLIENTE</span></h2>

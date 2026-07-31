@@ -99,7 +99,7 @@
         <tr><td><strong>Número de WhatsApp</strong></td><td>Enviar confirmação e lembretes</td><td>Execução de contrato</td></tr>
         <tr><td><strong>Data e horário escolhidos</strong></td><td>Registrar o agendamento</td><td>Execução de contrato</td></tr>
         <tr><td><strong>Serviço escolhido</strong></td><td>Informar a barbearia sobre o atendimento</td><td>Execução de contrato</td></tr>
-        <tr><td><strong>Barbeiro escolhido</strong></td><td>Organizar a agenda do profissional</td><td>Execução de contrato</td></tr>
+        <tr><td><strong>Profissional escolhido</strong></td><td>Organizar a agenda do profissional</td><td>Execução de contrato</td></tr>
       </tbody>
     </table>
 

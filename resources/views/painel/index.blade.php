@@ -106,7 +106,7 @@
 </head>
 <body><aside class="sidebar">
   <div class="sidebar-logo">BARBER<span class="pro">PRO</span></div>
-  <nav class="sidebar-nav"><div class="nav-section">Principal</div><a href="{{ route('painel') }}" class="nav-item active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Dashboard</a><a href="{{ route('painel.agendamentos') }}" class="nav-item "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Agendamentos @if($pendentes > 0)<span class="nav-badge">{{ $pendentes }}</span>@endif</a><div class="nav-section">Financeiro</div><a href="{{ route('painel.financeiro') }}" class="nav-item "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Financeiro</a><div class="nav-section">Gestão</div><a href="{{ route('painel.barbeiros') }}" class="nav-item "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Barbeiros</a><a href="{{ route('painel.servicos') }}" class="nav-item "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg> Serviços</a></nav>
+  <nav class="sidebar-nav"><div class="nav-section">Principal</div><a href="{{ route('painel') }}" class="nav-item active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Dashboard</a><a href="{{ route('painel.agendamentos') }}" class="nav-item "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Agendamentos @if($pendentes > 0)<span class="nav-badge">{{ $pendentes }}</span>@endif</a><div class="nav-section">Financeiro</div><a href="{{ route('painel.financeiro') }}" class="nav-item "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Financeiro</a><div class="nav-section">Gestão</div><a href="{{ route('painel.profissionals') }}" class="nav-item "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Profissionals</a><a href="{{ route('painel.servicos') }}" class="nav-item "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg> Serviços</a></nav>
   <div class="sidebar-footer">
     <div class="user-info">
       <div class="user-avatar">A</div>
@@ -143,13 +143,13 @@
           <p style="color:var(--muted);font-size:12px;text-align:center;padding:20px">Nenhum agendamento hoje</p>
         @else
         <table>
-          <thead><tr><th>Horário</th><th>Cliente</th><th>Barbeiro</th><th>Serviço</th><th>Status</th></tr></thead>
+          <thead><tr><th>Horário</th><th>Cliente</th><th>Profissional</th><th>Serviço</th><th>Status</th></tr></thead>
           <tbody>
             @foreach($proximos as $ag)
             <tr>
               <td style="color:var(--red);font-weight:700">{{ $ag->horario }}</td>
               <td>{{ $ag->cliente_nome }}</td>
-              <td>{{ $ag->barbeiro?->nome }}</td>
+              <td>{{ $ag->profissional?->nome }}</td>
               <td>{{ $ag->servico?->nome }}</td>
               <td>
                 @if($ag->status === 'confirmado') <span class="badge badge-green">Confirmado</span>
@@ -172,7 +172,7 @@
           <div class="pending-item">
             <div class="pending-info">
               <div class="pending-name">{{ $ag->cliente_nome }}</div>
-              <div class="pending-detail">{{ $ag->data->format('d/m') }} {{ $ag->horario }} · {{ $ag->barbeiro?->nome }} · {{ $ag->servico?->nome }} · R$ {{ number_format($ag->servico?->preco ?? 0, 2, ',', '.') }}</div>
+              <div class="pending-detail">{{ $ag->data->format('d/m') }} {{ $ag->horario }} · {{ $ag->profissional?->nome }} · {{ $ag->servico?->nome }} · R$ {{ number_format($ag->servico?->preco ?? 0, 2, ',', '.') }}</div>
             </div>
             <div class="pending-actions">
               <button class="btn btn-green" onclick="atualizarStatus({{ $ag->id }}, 'confirmado', this)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> OK</button>
