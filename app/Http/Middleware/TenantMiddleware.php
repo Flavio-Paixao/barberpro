@@ -13,6 +13,9 @@ class TenantMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
+        if (str_starts_with($request->path(), 'superadmin') || str_starts_with($request->path(), 'webhook')) {
+            return $next($request);
+        }
         $host = $request->getHost();
         $mainDomain = config('app.domain', 'barberpro.tech');
 

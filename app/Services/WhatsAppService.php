@@ -116,4 +116,13 @@ public function enviarAvisoVencimento(string $telefone, string $nomeBarbearia, i
     return $this->enviarMensagem($telefone, $mensagem);
 }
 
+
+    private function formatarTelefone(string $telefone): string
+    {
+        $numero = preg_replace('/\D/', '', $telefone);
+        if (!str_starts_with($numero, '55')) {
+            $numero = '55' . $numero;
+        }
+        return $numero;
+    }
 }
