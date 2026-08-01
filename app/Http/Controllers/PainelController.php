@@ -53,14 +53,17 @@ class PainelController extends Controller
         return view('painel.index', $dados);
     }
 
-    public function agendamentos()
+    public function agendamentos(\Illuminate\Http\Request $request)
     {
-        $agendamentos = Agendamento::with(['barbeiro', 'servico'])
+        $dataFiltro = $request->data ?? '';
+        $query = Agendamento::with(['barbeiro', 'servico'])
             ->orderByDesc('data')
-            ->orderByDesc('horario')
-            ->paginate(20);
-
-        return view('painel.agendamentos', compact('agendamentos'));
+            ->orderByDesc('horario');
+        if ($dataFiltro) {
+            $query->whereDate('data', $dataFiltro);
+        }
+        $agendamentos = $query->paginate(20);
+        return view('painel.agendamentos', compact('agendamentos', 'dataFiltro'));
     }
 
     public function financeiro()
