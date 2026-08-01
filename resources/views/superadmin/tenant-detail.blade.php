@@ -130,7 +130,7 @@
   <div class="stats-grid">
     <div class="stat-card blue"><div class="stat-label">Faturamento Total</div><div class="stat-value">R$ {{ number_format($faturamentoTotal, 0, ',', '.') }}</div></div>
     <div class="stat-card green"><div class="stat-label">Agendamentos</div><div class="stat-value">{{ $totalAgendamentos }}</div></div>
-    <div class="stat-card yellow"><div class="stat-label">Profissionals</div><div class="stat-value">{{ $profissionals->count() }}</div></div>
+    <div class="stat-card yellow"><div class="stat-label">Profissionais</div><div class="stat-value">{{ $barbeiros->count() }}</div></div>
     <div class="stat-card red"><div class="stat-label">Mensalidade</div><div class="stat-value">R$ {{ number_format($tenant->mensalidade, 0, ',', '.') }}</div></div>
   </div>
 
@@ -178,7 +178,7 @@
 
   <div class="tabs">
     <button class="tab-btn active" data-tab="geral">Visão Geral</button>
-    <button class="tab-btn" data-tab="profissionals">Profissionals</button>
+    <button class="tab-btn" data-tab="profissionals">Profissionais</button>
     <button class="tab-btn" data-tab="servicos">Serviços</button>
     <button class="tab-btn" data-tab="agendamentos">Agendamentos</button>
     <button class="tab-btn" data-tab="financeiro">Financeiro</button>
@@ -207,26 +207,6 @@
       </div>
     </div>
 
-    <div class="panel">
-      <div class="panel-header"><span class="panel-title">LOGO DA BARBEARIA</span></div>
-      <div class="panel-body" style="display:flex;align-items:center;gap:20px">
-        @if($tenant->logo)
-        <img src="{{ $tenant->logo }}" style="width:80px;height:80px;object-fit:cover;border-radius:8px;border:1px solid #1a1a1a">
-        @else
-        <div style="width:80px;height:80px;background:#1a1a1a;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:11px;text-align:center">Sem logo</div>
-        @endif
-        <form method="POST" action="/superadmin/tenants/{{ $tenant->id }}/logo" enctype="multipart/form-data">
-          @csrf
-          <div class="form-label">{{ $tenant->logo ? 'Trocar logo' : 'Enviar logo' }}</div>
-          <label style="display:inline-flex;align-items:center;gap:8px;cursor:pointer;background:#1D4ED8;color:#fff;padding:8px 16px;border-radius:6px;font-size:11px;font-weight:700;transition:all .2s" onmouseover="this.style.boxShadow='0 4px 15px rgba(29,78,216,.4)'" onmouseout="this.style.boxShadow='none'">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            Escolher arquivo
-            <input type="file" name="logo" accept="image/*" onchange="this.form.submit()" style="display:none"/>
-          </label>
-          <div style="font-size:10px;color:#6B7280;margin-top:6px">JPG ou PNG, máx. 2MB</div>
-        </form>
-      </div>
-    </div>
 
     <div class="panel">
       <div class="panel-header"><span class="panel-title">VENCIMENTO E MENSALIDADE</span></div>
@@ -258,7 +238,7 @@
     </div>
   </div>
 
-  <!-- PROFISSIONALS -->
+  <!-- PROFISSIONAIS CADASTRADOS -->
   <div class="tab-content" id="tab-profissionals">
     <div class="panel">
       <div class="panel-header"><span class="panel-title">ADICIONAR PROFISSIONAL</span></div>
@@ -277,28 +257,14 @@
     </div>
 
     <div class="panel">
-      <div class="panel-header"><span class="panel-title">PROFISSIONALS CADASTRADOS</span></div>
-      @if($profissionals->count() > 0)
+      <div class="panel-header"><span class="panel-title">PROFISSIONAIS CADASTRADOS</span></div>
+      @if($barbeiros->count() > 0)
       <table>
-        <thead><tr><th>Foto</th><th>Nome</th><th>Especialidade</th><th>Horário</th><th>Status</th><th>Ações</th></tr></thead>
+        <thead><tr><th>Nome</th><th>Especialidade</th><th>Horário</th><th>Status</th><th>Ações</th></tr></thead>
         <tbody>
-          @foreach($profissionals as $b)
+          @foreach($barbeiros as $b)
           <tr>
-            <td style="width:80px">
-              @if(!empty($b->foto))
-              <img src="{{ $b->foto }}" style="width:44px;height:44px;object-fit:cover;border-radius:6px;display:block;margin-bottom:4px">
-              @else
-              <div class="barber-avatar" style="margin-bottom:4px">{{ substr($b->nome,0,1) }}</div>
-              @endif
-              <form method="POST" action="/superadmin/tenants/{{ $tenant->id }}/profissionals/{{ $b->id }}/foto" enctype="multipart/form-data">
-                @csrf
-                <label class="foto-upload-label">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                  Foto
-                  <input type="file" name="foto" accept="image/*" onchange="this.form.submit()" style="display:none"/>
-                </label>
-              </form>
-            </td>
+            
             <td style="font-weight:600;color:#fff">{{ $b->nome }}</td>
             <td>{{ $b->especialidade ?? '—' }}</td>
             <td>{{ $b->hora_inicio }} - {{ $b->hora_fim }}</td>
