@@ -81,7 +81,8 @@ class AgendamentoController extends Controller
                 $barbeiro->nome,
                 $servico->nome,
                 $dataFormatada,
-                $request->horario
+                $request->horario,
+                $tenantData->telefone ?? ''
             );
         } catch (\Throwable $e) {
             \Illuminate\Support\Facades\Log::error('[WhatsApp] ' . $e->getMessage());

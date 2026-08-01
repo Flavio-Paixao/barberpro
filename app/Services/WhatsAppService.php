@@ -59,9 +59,9 @@ class WhatsAppService
         return $this->enviarMensagem($telefone, $mensagem);
     }
 
-    public function notificarBarbearia(string $clienteNome, string $clienteTelefone, string $barbeiro, string $servico, string $data, string $horario): bool
+    public function notificarBarbearia(string $clienteNome, string $clienteTelefone, string $barbeiro, string $servico, string $data, string $horario, string $telefoneBarbearia = ''): bool
     {
-        $telefoneBarbearia = env('BARBEARIA_TELEFONE');
+        $telefoneBarbearia = $telefoneBarbearia ?: env('BARBEARIA_TELEFONE');
 
         $mensagem = "🔔 Novo agendamento!\n\n";
         $mensagem .= "👤 Cliente: {$clienteNome}\n";
