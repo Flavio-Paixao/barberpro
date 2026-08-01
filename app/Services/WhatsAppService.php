@@ -50,7 +50,7 @@ class WhatsAppService
         $mensagem = "Olá {$clienteNome}! 🎉\n\n";
         $mensagem .= "Seu agendamento foi confirmado!\n\n";
         $mensagem .= "✂️ Serviço: {$servico}\n";
-        $mensagem .= "👨 Barbeiro: {$barbeiro}\n";
+        $mensagem .= "👨 Profissional: {$barbeiro}\n";
         $mensagem .= "📅 Data: {$data}\n";
         $mensagem .= "⏰ Horário: {$horario}\n";
         $mensagem .= "📍 Local: " . ($endereco ?: env('BARBEARIA_ENDERECO', 'A confirmar')) . "\n\n";
@@ -62,12 +62,13 @@ class WhatsAppService
     public function notificarBarbearia(string $clienteNome, string $clienteTelefone, string $barbeiro, string $servico, string $data, string $horario, string $telefoneBarbearia = ''): bool
     {
         $telefoneBarbearia = $telefoneBarbearia ?: env('BARBEARIA_TELEFONE');
+        if (empty($telefoneBarbearia)) { return false; }
 
         $mensagem = "🔔 Novo agendamento!\n\n";
         $mensagem .= "👤 Cliente: {$clienteNome}\n";
         $mensagem .= "📱 WhatsApp: {$clienteTelefone}\n";
         $mensagem .= "✂️ Serviço: {$servico}\n";
-        $mensagem .= "👨 Barbeiro: {$barbeiro}\n";
+        $mensagem .= "👨 Profissional: {$barbeiro}\n";
         $mensagem .= "📅 Data: {$data}\n";
         $mensagem .= "⏰ Horário: {$horario}";
 
