@@ -8,14 +8,14 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--bg:#000000;--surface:#0f0f0f;--border:#1a1a1a;--red:#DC2626;--blue:#1D4ED8;--blue-light:#3B82F6;--white:#FFFFFF;--text:#F8FAFC;--muted:#6B7280;--green:#22c55e;--yellow:#fbbf24}
+    :root{--bg:#000000;--surface:#0f0f0f;--border:#1a1a1a;--gold:#C9A84C;--gold-dark:#A07830;--gold-light:#E8C96D;--white:#FFFFFF;--text:#F8FAFC;--muted:#6B7280;--green:#22c55e;--yellow:#fbbf24}
     html,body{background:#000000!important;color-scheme:dark;height:100%}
     body{color:var(--text);font-family:'Inter',sans-serif;font-size:13px;line-height:1.6;overflow-x:hidden}
-    ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--red)}
+    ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--gold)}
     .glitch{position:relative;display:inline-block;font-family:'Bebas Neue',sans-serif}
     .glitch::before,.glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;font-family:'Bebas Neue',sans-serif;font-size:inherit;font-weight:inherit}
-    .glitch::before{color:var(--blue-light);clip-path:polygon(0 0,100% 0,100% 35%,0 35%);animation:glitch1 2.5s infinite}
-    .glitch::after{color:var(--red);clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);animation:glitch2 2.5s infinite;opacity:.7}
+    .glitch::before{color:var(--gold-light);clip-path:polygon(0 0,100% 0,100% 35%,0 35%);animation:glitch1 2.5s infinite}
+    .glitch::after{color:var(--gold);clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);animation:glitch2 2.5s infinite;opacity:.7}
     @keyframes glitch1{0%,85%,100%{transform:translateX(0);opacity:0}87%{transform:translateX(-4px);opacity:.9}92%{transform:translateX(2px);opacity:.6}}
     @keyframes glitch2{0%,85%,100%{transform:translateX(0);opacity:0}88%{transform:translateX(4px);opacity:.8}93%{transform:translateX(-2px);opacity:.5}}
     .btn{position:relative;overflow:hidden;border-radius:6px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:8px 16px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all .2s ease-in;border:none;box-shadow:0 4px 12px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.06)}
@@ -23,26 +23,26 @@
     .btn:hover{transform:translateY(-2px)}
     .btn:hover::before{animation:sh02 .5s linear}
     @keyframes sh02{from{opacity:0;left:0%}50%{opacity:1}to{opacity:0;left:100%}}
-    .btn-blue{background:var(--blue);color:var(--white);border:1px solid var(--blue)}
+    .btn-blue{background:var(--gold-dark);color:var(--white);border:1px solid var(--gold-dark)}
     .btn-blue:hover{box-shadow:0 8px 20px rgba(29,78,216,.5);transition:all .2s ease-out}
-    .btn-outline-blue{background:transparent;color:var(--blue-light);border:1px solid var(--blue)}
-    .btn-outline-blue:hover{background:var(--blue);color:var(--white);transition:all .2s ease-out}
+    .btn-outline-blue{background:transparent;color:var(--gold-light);border:1px solid var(--gold-dark)}
+    .btn-outline-blue:hover{background:var(--gold-dark);color:var(--white);transition:all .2s ease-out}
     .btn-green{background:var(--green);color:#000;border:1px solid var(--green)}
     .btn-green:hover{box-shadow:0 8px 20px rgba(34,197,94,.5);transition:all .2s ease-out}
-    .btn-red-soft{background:rgba(220,38,38,.1);color:var(--red);border:1px solid var(--red)}
-    .btn-red-soft:hover{background:var(--red);color:var(--white);transition:all .2s ease-out}
+    .btn-red-soft{background:rgba(220,38,38,.1);color:var(--gold);border:1px solid var(--gold)}
+    .btn-red-soft:hover{background:var(--gold);color:var(--white);transition:all .2s ease-out}
     .sidebar{width:240px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:50}
     .sidebar-logo{padding:20px;border-bottom:1px solid var(--border);font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--white)}
-    .sidebar-logo .pro{color:var(--red)}
+    .sidebar-logo .pro{color:var(--gold)}
     .sidebar-nav{flex:1;padding:12px 0;overflow-y:auto}
     .nav-section{padding:8px 20px 4px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
     .nav-item{display:flex;align-items:center;gap:10px;padding:10px 20px;color:var(--muted);transition:all .2s;font-size:11px;font-weight:700;letter-spacing:.5px;border-left:2px solid transparent;text-transform:uppercase;text-decoration:none}
     .nav-item:hover{color:var(--white);background:rgba(29,78,216,.05)}
-    .nav-item.active{color:var(--blue-light);background:rgba(29,78,216,.08);border-left-color:var(--blue)}
-    .nav-badge{margin-left:auto;background:var(--red);color:var(--white);font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px}
+    .nav-item.active{color:var(--gold-light);background:rgba(29,78,216,.08);border-left-color:var(--gold-dark)}
+    .nav-badge{margin-left:auto;background:var(--gold);color:var(--white);font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px}
     .sidebar-footer{padding:16px 20px;border-top:1px solid var(--border)}
     .user-info{display:flex;align-items:center;gap:10px}
-    .user-avatar{width:32px;height:32px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--white);flex-shrink:0;border-radius:4px}
+    .user-avatar{width:32px;height:32px;background:var(--gold-dark);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--white);flex-shrink:0;border-radius:4px}
     .user-name{font-size:12px;font-weight:700;color:var(--white)}
     .user-role{font-size:10px;color:var(--muted)}
     .main{margin-left:240px;min-height:100vh;display:flex;flex-direction:column}
@@ -53,8 +53,8 @@
     .metrics-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:24px}
     .metric-card{background:var(--surface);border:1px solid var(--border);padding:20px;position:relative;overflow:hidden;border-radius:4px}
     .metric-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px}
-    .metric-card.red::before{background:var(--red)}
-    .metric-card.blue::before{background:var(--blue)}
+    .metric-card.red::before{background:var(--gold)}
+    .metric-card.blue::before{background:var(--gold-dark)}
     .metric-card.green::before{background:var(--green)}
     .metric-card.yellow::before{background:var(--yellow)}
     .metric-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
@@ -72,24 +72,24 @@
     tbody tr:hover{background:rgba(29,78,216,.03)}
     .badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:4px}
     .badge-green{color:var(--green);border:1px solid rgba(34,197,94,.3);background:rgba(34,197,94,.08)}
-    .badge-red{color:var(--red);border:1px solid rgba(220,38,38,.3);background:rgba(220,38,38,.08)}
-    .badge-blue{color:var(--blue-light);border:1px solid rgba(59,130,246,.3);background:rgba(59,130,246,.08)}
+    .badge-red{color:var(--gold);border:1px solid rgba(220,38,38,.3);background:rgba(220,38,38,.08)}
+    .badge-blue{color:var(--gold-light);border:1px solid rgba(59,130,246,.3);background:rgba(59,130,246,.08)}
     .badge-yellow{color:var(--yellow);border:1px solid rgba(251,191,36,.3);background:rgba(251,191,36,.08)}
-    .pending-item{background:#000;border:1px solid var(--border);border-left:3px solid var(--red);padding:14px 16px;display:flex;align-items:center;gap:14px;margin-bottom:10px;border-radius:0 4px 4px 0}
+    .pending-item{background:#000;border:1px solid var(--border);border-left:3px solid var(--gold);padding:14px 16px;display:flex;align-items:center;gap:14px;margin-bottom:10px;border-radius:0 4px 4px 0}
     .pending-info{flex:1}
     .pending-name{font-size:13px;font-weight:700;margin-bottom:2px;color:var(--white)}
     .pending-detail{font-size:11px;color:var(--muted)}
     .pending-actions{display:flex;gap:8px}
     .bar-chart{display:flex;align-items:flex-end;gap:8px;height:120px;padding:0 4px}
     .bar-group{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px}
-    .bar{width:100%;background:var(--blue);border-radius:2px 2px 0 0;min-height:4px;opacity:.85}
+    .bar{width:100%;background:var(--gold-dark);border-radius:2px 2px 0 0;min-height:4px;opacity:.85}
     .bar:hover{opacity:1}
     .bar-label{font-size:10px;color:var(--muted)}
     .barber-card{background:#000;border:1px solid var(--border);padding:20px;display:flex;flex-direction:column;gap:12px;border-radius:4px}
     .barber-header{display:flex;align-items:center;gap:12px}
-    .barber-avatar{width:44px;height:44px;background:linear-gradient(135deg,var(--red),var(--blue));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--white);flex-shrink:0;border-radius:4px}
+    .barber-avatar{width:44px;height:44px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--white);flex-shrink:0;border-radius:4px}
     .barber-name{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px;color:var(--white)}
-    .barber-spec{font-size:11px;color:var(--red)}
+    .barber-spec{font-size:11px;color:var(--gold)}
     .toggle{position:relative;width:40px;height:22px;display:inline-block}
     .toggle input{display:none}
     .toggle-slider{position:absolute;inset:0;background:var(--border);cursor:pointer;transition:.3s;border-radius:2px}
@@ -98,7 +98,7 @@
     .toggle input:checked + .toggle-slider::before{background:var(--green);transform:translateX(18px)}
     .service-item{background:#000;border:1px solid var(--border);padding:16px;display:flex;align-items:center;gap:16px;margin-bottom:10px;border-radius:4px}
     .service-name{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px;color:var(--white);flex:1}
-    .service-price{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--red);min-width:70px;text-align:right}
+    .service-price{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--gold);min-width:70px;text-align:right}
     .service-time{font-size:11px;color:var(--muted);min-width:50px;text-align:center}
     @media(max-width:1200px){.metrics-grid{grid-template-columns:repeat(3,1fr)}}
     @media(max-width:768px){.sidebar{transform:translateX(-100%)}.main{margin-left:0}.metrics-grid{grid-template-columns:repeat(2,1fr)}.grid-2,.grid-3{grid-template-columns:1fr}}
@@ -121,7 +121,7 @@
 <main class="main">
   <div class="topbar">
     <div>
-      <div class="topbar-title"><span class="glitch" data-text="DASHBOARD">DASH<span style="color:var(--blue-light)">BOARD</span></span></div>
+      <div class="topbar-title"><span class="glitch" data-text="DASHBOARD">DASH<span style="color:var(--gold-light)">BOARD</span></span></div>
       <div class="topbar-sub">// Visão geral de hoje — {{ now()->format('d/m/Y') }}</div>
     </div>
     <div style="display:flex;gap:10px">
@@ -138,7 +138,7 @@
     </div>
     <div class="grid-2">
       <div class="card">
-        <div class="card-header"><div><div class="card-title">Próximos <span style="color:var(--blue-light)">Agendamentos</span></div><div class="card-sub">// Hoje</div></div></div>
+        <div class="card-header"><div><div class="card-title">Próximos <span style="color:var(--gold-light)">Agendamentos</span></div><div class="card-sub">// Hoje</div></div></div>
         @if($proximos->isEmpty())
           <p style="color:var(--muted);font-size:12px;text-align:center;padding:20px">Nenhum agendamento hoje</p>
         @else
@@ -147,7 +147,7 @@
           <tbody>
             @foreach($proximos as $ag)
             <tr>
-              <td style="color:var(--red);font-weight:700">{{ $ag->horario }}</td>
+              <td style="color:var(--gold);font-weight:700">{{ $ag->horario }}</td>
               <td>{{ $ag->cliente_nome }}</td>
               <td>{{ $ag->profissional?->nome }}</td>
               <td>{{ $ag->servico?->nome }}</td>
@@ -164,7 +164,7 @@
         @endif
       </div>
       <div class="card">
-        <div class="card-header"><div><div class="card-title">Aguardando <span style="color:var(--blue-light)">Confirmação</span></div><div class="card-sub">// Pendentes</div></div></div>
+        <div class="card-header"><div><div class="card-title">Aguardando <span style="color:var(--gold-light)">Confirmação</span></div><div class="card-sub">// Pendentes</div></div></div>
         @if($pendentes_lista->isEmpty())
           <p style="color:var(--muted);font-size:12px;text-align:center;padding:20px">Nenhum agendamento pendente</p>
         @else

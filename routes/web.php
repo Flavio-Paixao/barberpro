@@ -19,7 +19,10 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 
 // Público
-Route::get('/', [AgendamentoController::class, 'index'])->name('home');
+Route::get('/', function() {
+    return view('selecao-genero');
+})->name('home');
+Route::get('/agendar', [AgendamentoController::class, 'index'])->name('agendar');
 Route::get('/horarios-disponiveis', [AgendamentoController::class, 'horariosDisponiveis'])->name('horarios.disponiveis');
 Route::post('/agendar', [AgendamentoController::class, 'store'])->name('agendamento.store');
 Route::get('/termos', fn() => view('termos'))->name('termos');

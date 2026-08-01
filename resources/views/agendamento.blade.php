@@ -13,10 +13,12 @@
       --bg:#000000;
       --surface:#0f0f0f;
       --border:#1a1a1a;
-      --red:#DC2626;
-      --red-light:#EF4444;
-      --blue:#1D4ED8;
-      --blue-light:#3B82F6;
+      --accent:{{ $genero === 'feminino' ? '#ec4899' : '#C9A84C' }};
+      --accent-light:{{ $genero === 'feminino' ? '#f472b6' : '#E8C96D' }};
+      --accent-dark:{{ $genero === 'feminino' ? '#be185d' : '#A07830' }};
+      --gold:#C9A84C;
+      --gold-light:#E8C96D;
+      --gold-dark:#A07830;
       --white:#FFFFFF;
       --text:#F8FAFC;
       --muted:#6B7280;
@@ -24,13 +26,13 @@
     }
     html,body{background:#000000!important;color-scheme:dark;min-height:100vh}
     body{color:var(--text);font-family:'Inter',sans-serif;font-size:14px;line-height:1.6;overflow-x:hidden}
-    ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--red)}
+    ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--accent)}
 
     /* GLITCH */
     .glitch{position:relative;display:inline-block;font-family:'Bebas Neue',sans-serif}
     .glitch::before,.glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;font-family:'Bebas Neue',sans-serif;font-size:inherit;font-weight:inherit}
-    .glitch::before{color:var(--blue-light);clip-path:polygon(0 0,100% 0,100% 35%,0 35%);animation:glitch1 2.5s infinite}
-    .glitch::after{color:var(--red);clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);animation:glitch2 2.5s infinite;opacity:.7}
+    .glitch::before{color:var(--accent-light);clip-path:polygon(0 0,100% 0,100% 35%,0 35%);animation:glitch1 2.5s infinite}
+    .glitch::after{color:var(--accent);clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);animation:glitch2 2.5s infinite;opacity:.7}
     @keyframes glitch1{0%,85%,100%{transform:translateX(0);opacity:0}87%{transform:translateX(-4px);opacity:.9}92%{transform:translateX(2px);opacity:.6}}
     @keyframes glitch2{0%,85%,100%{transform:translateX(0);opacity:0}88%{transform:translateX(4px);opacity:.8}93%{transform:translateX(-2px);opacity:.5}}
 
@@ -41,10 +43,10 @@
     .btn:hover::before{animation:sh02 .5s linear}
     .btn:active{transform:translateY(0)!important}
     @keyframes sh02{from{opacity:0;left:0%}50%{opacity:1}to{opacity:0;left:100%}}
-    .btn-red{background:var(--red);color:var(--white);border:1px solid var(--red)}
+    .btn-red{background:var(--accent);color:var(--white);border:1px solid var(--accent)}
     .btn-red:hover{box-shadow:0 8px 25px rgba(220,38,38,.6);transition:all .2s ease-out}
-    .btn-outline-red{background:transparent;color:var(--red);border:1px solid var(--red)}
-    .btn-outline-red:hover{background:var(--red);color:var(--white);box-shadow:0 8px 25px rgba(220,38,38,.5);transition:all .2s ease-out}
+    .btn-outline-red{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+    .btn-outline-red:hover{background:var(--accent);color:var(--white);box-shadow:0 8px 25px rgba(220,38,38,.5);transition:all .2s ease-out}
     .btn-green{background:var(--green);color:#000;border:1px solid var(--green)}
     .btn-green:hover{box-shadow:0 8px 25px rgba(34,197,94,.5);transition:all .2s ease-out}
 
@@ -57,7 +59,7 @@
     nav{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border);background:rgba(0,0,0,.97);backdrop-filter:blur(20px);padding:16px 0}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:3px}
-    .nav-logo .pro{color:var(--red)}
+    .nav-logo .pro{color:var(--accent)}
     .nav-links{display:flex;gap:32px;list-style:none}
     .nav-links a{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
     .nav-links a:hover{color:var(--white)}
@@ -67,33 +69,33 @@
     .hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(220,38,38,.08) 0%,transparent 65%);border-radius:50%;pointer-events:none}
     .hero::after{content:'';position:absolute;bottom:-150px;left:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(29,78,216,.06) 0%,transparent 65%);border-radius:50%;pointer-events:none}
     .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
-    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.3);color:var(--red);padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
-    .badge-dot{width:6px;height:6px;background:var(--red);border-radius:50%;animation:pulse 2s infinite}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.3);color:var(--accent);padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+    .badge-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
     @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
     .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,8vw,88px);line-height:.95;letter-spacing:3px;margin-bottom:20px}
     .hero-desc{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:32px;max-width:440px}
     .hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
     .hero-stats{display:flex;gap:32px}
     .stat-num{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:2px;color:var(--white);line-height:1}
-    .stat-num .accent{color:var(--red)}
+    .stat-num .accent{color:var(--accent)}
     .stat-label{font-size:11px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
 
     /* BOOKING CARD */
     .booking-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:32px;position:relative;overflow:hidden}
-    .booking-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--blue))}
+    .booking-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-dark))}
     .booking-title{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;color:var(--white);margin-bottom:4px}
     .booking-sub{font-size:12px;color:var(--muted);margin-bottom:24px}
     .form-group{margin-bottom:16px}
     .form-label{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;display:block}
     .form-input,.form-select{width:100%;background:#000000!important;border:1px solid var(--border);color:var(--text)!important;padding:11px 14px;border-radius:6px;font-size:13px;font-family:'Inter',sans-serif;outline:none;transition:border-color .2s;color-scheme:dark;-webkit-appearance:none;appearance:none}
-    .form-input:focus,.form-select:focus{border-color:var(--red)}
+    .form-input:focus,.form-select:focus{border-color:var(--accent)}
     .form-select option{background:#000000}
     .time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
     .time-slot{background:#000000;border:1px solid var(--border);color:var(--muted);padding:9px;font-size:12px;font-weight:600;text-align:center;cursor:pointer;transition:all .2s;border-radius:6px}
-    .time-slot:hover,.time-slot.active{background:rgba(220,38,38,.1);border-color:var(--red);color:var(--red)}
+    .time-slot:hover,.time-slot.active{background:rgba(220,38,38,.1);border-color:var(--accent);color:var(--accent)}
     .time-slot.taken{opacity:.3;cursor:not-allowed;pointer-events:none}
     .time-loading{font-size:12px;color:var(--muted);padding:16px;text-align:center}
-    .btn-book{width:100%;background:var(--red);color:var(--white);border:1px solid var(--red);padding:14px;font-size:13px;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .2s ease-in;margin-top:12px;border-radius:6px;box-shadow:0 4px 15px rgba(220,38,38,.35);position:relative;overflow:hidden}
+    .btn-book{width:100%;background:var(--accent);color:var(--white);border:1px solid var(--accent);padding:14px;font-size:13px;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .2s ease-in;margin-top:12px;border-radius:6px;box-shadow:0 4px 15px rgba(220,38,38,.35);position:relative;overflow:hidden}
     .btn-book::before{content:'';display:block;width:0;height:86%;position:absolute;top:7%;left:0;opacity:0;background:#fff;box-shadow:0 0 50px 30px #fff;transform:skewX(-20deg)}
     .btn-book:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(220,38,38,.55)}
     .btn-book:hover::before{animation:sh02 .5s linear}
@@ -108,48 +110,48 @@
     /* SERVICES */
     .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
     .service-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:24px;transition:all .2s;position:relative;overflow:hidden}
-    .service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),var(--blue));transform:scaleX(0);transition:transform .3s;transform-origin:left}
-    .service-card:hover{border-color:var(--red);transform:translateY(-4px)}
+    .service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));transform:scaleX(0);transition:transform .3s;transform-origin:left}
+    .service-card:hover{border-color:var(--accent);transform:translateY(-4px)}
     .service-card:hover::after{transform:scaleX(1)}
-    .service-icon{width:44px;height:44px;background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--red)}
+    .service-icon{width:44px;height:44px;background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--accent)}
     .service-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--white);margin-bottom:8px}
     .service-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px}
     .service-footer{display:flex;align-items:center;justify-content:space-between}
-    .service-price{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;color:var(--red)}
+    .service-price{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;color:var(--accent)}
     .service-time{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:4px}
 
     /* BARBERS */
     .barbers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
     .barber-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:24px;text-align:center;transition:all .2s}
-    .barber-card:hover{border-color:var(--red);transform:translateY(-4px)}
-    .barber-avatar{width:72px;height:72px;background:linear-gradient(135deg,var(--red),var(--blue));border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;color:var(--white)}
+    .barber-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+    .barber-avatar{width:72px;height:72px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;color:var(--white)}
     .barber-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--white);margin-bottom:4px}
-    .barber-spec{font-size:12px;color:var(--red);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
-    .barber-stars{display:flex;align-items:center;justify-content:center;gap:2px;color:var(--red);margin-bottom:12px;font-size:14px}
+    .barber-spec{font-size:12px;color:var(--accent);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+    .barber-stars{display:flex;align-items:center;justify-content:center;gap:2px;color:var(--accent);margin-bottom:12px;font-size:14px}
     .barber-tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
-    .barber-tag{font-size:11px;background:rgba(29,78,216,.1);border:1px solid rgba(29,78,216,.2);color:var(--blue-light);padding:3px 10px;border-radius:20px}
+    .barber-tag{font-size:11px;background:rgba(29,78,216,.1);border:1px solid rgba(29,78,216,.2);color:var(--accent-light);padding:3px 10px;border-radius:20px}
 
     /* HOW */
     .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
     .step{text-align:center;position:relative}
     .step:not(:last-child)::after{content:'';position:absolute;top:28px;left:calc(50% + 28px);right:calc(-50% + 28px);height:1px;background:var(--border)}
     .step-num{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;position:relative;z-index:1}
-    .step-num.red{background:var(--red);color:var(--white)}
-    .step-num.blue{background:var(--blue);color:var(--white)}
+    .step-num.red{background:var(--accent);color:var(--white)}
+    .step-num.blue{background:var(--accent-dark);color:var(--white)}
     .step-title{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px;color:var(--white);margin-bottom:8px}
     .step-desc{font-size:12px;color:var(--muted);line-height:1.6}
 
-    .sec-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.3);color:var(--red);padding:5px 14px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+    .sec-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.3);color:var(--accent);padding:5px 14px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
     .sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,56px);letter-spacing:3px;color:var(--white);margin-bottom:12px}
-    .sec-title span{color:var(--red)}
+    .sec-title span{color:var(--accent)}
     .sec-sub{font-size:15px;color:var(--muted);max-width:480px;margin:0 auto}
 
     footer{padding:40px 0;border-top:1px solid var(--border)}
     .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
     .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--white)}
-    .footer-logo .pro{color:var(--red)}
+    .footer-logo .pro{color:var(--accent)}
     .footer-link{font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:1px;text-transform:uppercase;transition:color .2s}
-    .footer-link:hover{color:var(--red)}
+    .footer-link:hover{color:var(--accent)}
 
 
     @media(max-width:1024px){.services-grid,.barbers-grid{grid-template-columns:repeat(2,1fr)}.steps-grid{grid-template-columns:repeat(2,1fr)}}
@@ -182,7 +184,7 @@
         <div class="hero-badge"><div class="badge-dot"></div> Agendamento Online 24h</div>
         <h1>
           <span class="glitch" data-text="AGENDE" style="color:var(--white)">AGENDE</span><br>
-          <span class="glitch" data-text="SEU CORTE" style="color:var(--blue-light)">SEU CORTE</span><br>
+          <span class="glitch" data-text="SEU CORTE" style="color:var(--accent-light)">SEU CORTE</span><br>
           <span class="glitch" data-text="ONLINE" style="color:var(--white)">ONLINE</span>
         </h1>
         <p class="hero-desc">Sem espera, sem ligação. Escolha seu profissional favorito, o horário ideal e receba confirmação instantânea no WhatsApp.</p>
@@ -411,7 +413,7 @@
   <div class="container">
     <div class="footer-inner">
       <span class="footer-logo">BARBER<span class="pro">PRO</span></span>
-      <span style="font-size:11px;color:var(--muted)">Desenvolvido por <a href="http://portfolio-php-681892816208.s3-website-sa-east-1.amazonaws.com/" target="_blank" style="color:var(--blue-light);text-decoration:none">Flávio Paixão</a></span>
+      <span style="font-size:11px;color:var(--muted)">Desenvolvido por <a href="http://portfolio-php-681892816208.s3-website-sa-east-1.amazonaws.com/" target="_blank" style="color:var(--accent-light);text-decoration:none">Flávio Paixão</a></span>
       <div style="display:flex;gap:20px">
         <a href="/termos" class="footer-link">Termos de Uso</a>
         <a href="/privacidade" class="footer-link">Privacidade</a>
