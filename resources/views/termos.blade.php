@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="color-scheme" content="dark"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-  <title>Termos de Uso — BarberPro</title>
+  <title>Termos de Uso — StudioPro</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -65,15 +65,15 @@
   <div class="container">
 
     <div class="highlight">
-      <p>Ao utilizar o sistema BarberPro, você concorda com os termos descritos neste documento. Leia atentamente antes de usar a plataforma.</p>
+      <p>Ao utilizar o sistema StudioPro, você concorda com os termos descritos neste documento. Leia atentamente antes de usar a plataforma.</p>
     </div>
 
-    <h2>1. SOBRE O <span>BARBERPRO</span></h2>
-    <p>O BarberPro é uma plataforma de agendamento online desenvolvida para barbearias. O sistema permite que clientes agendem horários com profissionals de forma simples e rápida, recebendo confirmações automáticas via WhatsApp.</p>
-    <p>O BarberPro é desenvolvido e mantido por <strong>Flávio da Paixão Nunes</strong>, com sede em Santos, SP, Brasil.</p>
+    <h2>1. SOBRE O <span>STUDIOPRO</span></h2>
+    <p>O StudioPro é uma plataforma de agendamento online desenvolvida para barbearias. O sistema permite que clientes agendem horários com profissionals de forma simples e rápida, recebendo confirmações automáticas via WhatsApp.</p>
+    <p>O StudioPro é desenvolvido e mantido por <strong>Flávio da Paixão Nunes</strong>, com sede em Santos, SP, Brasil.</p>
 
     <h2>2. ACEITAÇÃO DOS <span>TERMOS</span></h2>
-    <p>Ao acessar e utilizar o sistema BarberPro, seja como cliente agendando um horário ou como estabelecimento contratante, você declara que:</p>
+    <p>Ao acessar e utilizar o sistema StudioPro, seja como cliente agendando um horário ou como estabelecimento contratante, você declara que:</p>
     <ul>
       <li>Leu e compreendeu estes Termos de Uso na íntegra</li>
       <li>Tem capacidade legal para aceitar estes termos</li>
@@ -81,7 +81,7 @@
     </ul>
 
     <h2>3. USO DO <span>SISTEMA</span></h2>
-    <p>O sistema BarberPro disponibiliza as seguintes funcionalidades:</p>
+    <p>O sistema StudioPro disponibiliza as seguintes funcionalidades:</p>
     <ul>
       <li><strong>Agendamento online:</strong> Clientes podem agendar horários 24 horas por dia, 7 dias por semana</li>
       <li><strong>Confirmação via WhatsApp:</strong> Notificações automáticas sobre agendamentos</li>
@@ -90,7 +90,7 @@
     </ul>
 
     <h2>4. RESPONSABILIDADES DO <span>CLIENTE</span></h2>
-    <p>Ao realizar um agendamento através do BarberPro, o cliente se compromete a:</p>
+    <p>Ao realizar um agendamento através do StudioPro, o cliente se compromete a:</p>
     <ul>
       <li>Fornecer informações verdadeiras, incluindo nome e número de WhatsApp válido</li>
       <li>Comparecer no horário agendado ou cancelar com antecedência mínima de 1 hora</li>
@@ -99,7 +99,7 @@
     </ul>
 
     <h2>5. RESPONSABILIDADES DA <span>BARBEARIA</span></h2>
-    <p>O estabelecimento contratante do BarberPro se compromete a:</p>
+    <p>O estabelecimento contratante do StudioPro se compromete a:</p>
     <ul>
       <li>Honrar os agendamentos realizados pelo sistema</li>
       <li>Manter atualizados os horários de disponibilidade dos profissionais</li>
@@ -108,7 +108,7 @@
     </ul>
 
     <h2>6. CANCELAMENTOS E <span>REAGENDAMENTOS</span></h2>
-    <p>O BarberPro permite que clientes confirmem ou cancelem agendamentos respondendo ao lembrete automático enviado via WhatsApp:</p>
+    <p>O StudioPro permite que clientes confirmem ou cancelem agendamentos respondendo ao lembrete automático enviado via WhatsApp:</p>
     <ul>
       <li>Responda <strong>1</strong> para CONFIRMAR o agendamento</li>
       <li>Responda <strong>2</strong> para CANCELAR o agendamento</li>
@@ -116,10 +116,10 @@
     <p>A política de cancelamento específica de cada barbearia pode variar. Consulte o estabelecimento para mais informações.</p>
 
     <h2>7. PRIVACIDADE E <span>DADOS</span></h2>
-    <p>O BarberPro coleta apenas os dados necessários para o funcionamento do sistema de agendamento. Para mais informações sobre como tratamos seus dados, consulte nossa <a href="/privacidade" style="color:#3B82F6">Política de Privacidade</a>.</p>
+    <p>O StudioPro coleta apenas os dados necessários para o funcionamento do sistema de agendamento. Para mais informações sobre como tratamos seus dados, consulte nossa <a href="/privacidade" style="color:#3B82F6">Política de Privacidade</a>.</p>
 
     <h2>8. LIMITAÇÃO DE <span>RESPONSABILIDADE</span></h2>
-    <p>O BarberPro atua como intermediário entre cliente e barbearia. Não nos responsabilizamos por:</p>
+    <p>O StudioPro atua como intermediário entre cliente e barbearia. Não nos responsabilizamos por:</p>
     <ul>
       <li>Qualidade dos serviços prestados pela barbearia</li>
       <li>Falhas de comunicação por número de WhatsApp incorreto ou desativado</li>
@@ -128,7 +128,7 @@
     </ul>
 
     <h2>9. PROPRIEDADE <span>INTELECTUAL</span></h2>
-    <p>Todo o conteúdo do sistema BarberPro, incluindo design, código-fonte, logotipos e textos, é de propriedade exclusiva de Flávio da Paixão Nunes. É proibido reproduzir, distribuir ou utilizar qualquer elemento sem autorização prévia por escrito.</p>
+    <p>Todo o conteúdo do sistema StudioPro, incluindo design, código-fonte, logotipos e textos, é de propriedade exclusiva de Flávio da Paixão Nunes. É proibido reproduzir, distribuir ou utilizar qualquer elemento sem autorização prévia por escrito.</p>
 
     <h2>10. ALTERAÇÕES NOS <span>TERMOS</span></h2>
     <p>Reservamos o direito de modificar estes Termos de Uso a qualquer momento. Alterações significativas serão comunicadas com antecedência. O uso continuado do sistema após as alterações implica na aceitação dos novos termos.</p>
@@ -147,7 +147,7 @@
 
 <footer>
   <div class="container">
-    <p>© 2026 BarberPro. Desenvolvido por <a href="http://portfolio-php-681892816208.s3-website-sa-east-1.amazonaws.com/" target="_blank">Flávio Paixão</a></p>
+    <p>© 2026 StudioPro. Desenvolvido por <a href="http://portfolio-php-681892816208.s3-website-sa-east-1.amazonaws.com/" target="_blank">Flávio Paixão</a></p>
   </div>
 </footer>
 </body>

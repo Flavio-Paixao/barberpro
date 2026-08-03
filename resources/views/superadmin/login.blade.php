@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="color-scheme" content="dark"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-  <title>Super Admin — BarberPro</title>
+  <title>Super Admin — StudioPro</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -71,7 +71,7 @@
 <div class="page">
   <div class="terminal-tag">
     <div class="terminal-dots"><span></span><span></span><span></span></div>
-    root@barberpro:~#
+    root@studiopro:~#
   </div>
 
   <div class="login-card">
@@ -80,7 +80,7 @@
       Acesso Restrito
     </div>
 
-    <a href="/" class="logo">BARBER<span>PRO</span></a>
+    <a href="/" class="logo">STUDIO<span>PRO</span></a>
     <h1 class="login-title"><span class="glitch" data-text="ROOT">RO<span style="color:#DC2626">OT</span></span></h1>
     <p class="login-sub">// painel mestre — somente administradores</p>
 
@@ -96,7 +96,7 @@
       @csrf
       <div class="form-group">
         <label class="form-label">> email</label>
-        <input class="form-input" type="email" name="email" placeholder="root@barberpro.tech" value="{{ old('email') }}" required autofocus/>
+        <input class="form-input" type="email" name="email" placeholder="root@studiopro.tech" value="{{ old('email') }}" required autofocus/>
       </div>
       <div class="form-group">
         <label class="form-label">> senha</label>
@@ -110,7 +110,7 @@
 </div>
 
 <footer>
-  <p>BarberPro System v1.0 · acesso monitorado</p>
+  <p>StudioPro System v1.0 · acesso monitorado</p>
 </footer>
 
 <script>

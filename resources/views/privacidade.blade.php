@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="color-scheme" content="dark"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-  <title>Política de Privacidade — BarberPro</title>
+  <title>Política de Privacidade — StudioPro</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -74,17 +74,17 @@
   <div class="container">
 
     <div class="highlight">
-      <p>O BarberPro respeita sua privacidade e está comprometido com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+      <p>O StudioPro respeita sua privacidade e está comprometido com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
     </div>
 
     <h2>1. QUEM SOMOS — <span>CONTROLADOR</span></h2>
     <p>O controlador dos seus dados pessoais é:</p>
     <ul>
       <li><strong>Nome:</strong> Flávio da Paixão Nunes</li>
-      <li><strong>Empresa:</strong> BarberPro</li>
+      <li><strong>Empresa:</strong> StudioPro</li>
       <li><strong>Endereço:</strong> Santos, SP, Brasil</li>
       <li><strong>E-mail:</strong> flaviopaixao1992@gmail.com</li>
-      <li><strong>Site:</strong> barberpro.tech</li>
+      <li><strong>Site:</strong> studiopro.tech</li>
     </ul>
 
     <h2>2. QUAIS DADOS <span>COLETAMOS</span></h2>
@@ -167,10 +167,10 @@
       <li>Lembrete 20 minutos antes do horário</li>
       <li>Confirmação de cancelamento (quando solicitado)</li>
     </ul>
-    <p>Você pode cancelar o recebimento dessas mensagens a qualquer momento entrando em contato com a barbearia ou com o suporte do BarberPro.</p>
+    <p>Você pode cancelar o recebimento dessas mensagens a qualquer momento entrando em contato com a barbearia ou com o suporte do StudioPro.</p>
 
     <h2>8. COOKIES E <span>TECNOLOGIAS</span></h2>
-    <p>O BarberPro utiliza cookies de sessão essenciais para o funcionamento do sistema, como manutenção da sessão de login do painel administrativo. Não utilizamos cookies de rastreamento, publicidade ou análise de comportamento.</p>
+    <p>O StudioPro utiliza cookies de sessão essenciais para o funcionamento do sistema, como manutenção da sessão de login do painel administrativo. Não utilizamos cookies de rastreamento, publicidade ou análise de comportamento.</p>
 
     <h2>9. ALTERAÇÕES NESTA <span>POLÍTICA</span></h2>
     <p>Esta Política de Privacidade pode ser atualizada periodicamente. Sempre que houver alterações significativas, publicaremos a nova versão nesta página com a data de atualização. Recomendamos que você a revise regularmente.</p>
@@ -193,7 +193,7 @@
 
 <footer>
   <div class="container">
-    <p>© 2026 BarberPro. Desenvolvido por <a href="http://portfolio-php-681892816208.s3-website-sa-east-1.amazonaws.com/" target="_blank">Flávio Paixão</a> | <a href="/termos">Termos de Uso</a></p>
+    <p>© 2026 StudioPro. Desenvolvido por <a href="http://portfolio-php-681892816208.s3-website-sa-east-1.amazonaws.com/" target="_blank">Flávio Paixão</a> | <a href="/termos">Termos de Uso</a></p>
   </div>
 </footer>
 </body>

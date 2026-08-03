@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="color-scheme" content="dark"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-  <title>Login — BarberPro</title>
+  <title>Login — StudioPro</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -106,12 +106,12 @@
       Entrar com Google
     </a>
 
-    <a href="/" class="back-link">← Voltar para <span>barberpro.tech</span></a>
+    <a href="/" class="back-link">← Voltar para <span>studiopro.tech</span></a>
   </div>
 </div>
 
 <footer>
-  <p><a href="/termos">Termos de Uso</a> · <a href="/privacidade">Privacidade</a> · © 2026 BarberPro</p>
+  <p><a href="/termos">Termos de Uso</a> · <a href="/privacidade">Privacidade</a> · © 2026 StudioPro</p>
 </footer>
 
 <script>

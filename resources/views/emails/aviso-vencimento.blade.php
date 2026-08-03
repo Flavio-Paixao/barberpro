@@ -13,9 +13,9 @@
 <p style="font-family:Arial,sans-serif;font-size:16px;color:#ffffff;margin:0 0 16px 0">Olá, {{ $tenant->nome }}! ⏰</p>
 
 @if($diasRestantes === 1)
-<p style="font-family:Arial,sans-serif;font-size:15px;color:#D1D5DB;line-height:1.6;margin:0 0 20px 0">Sua mensalidade do <strong style="color:#fff">BarberPro</strong> vence <strong style="color:#DC2626">amanhã</strong>!</p>
+<p style="font-family:Arial,sans-serif;font-size:15px;color:#D1D5DB;line-height:1.6;margin:0 0 20px 0">Sua mensalidade do <strong style="color:#fff">StudioPro</strong> vence <strong style="color:#DC2626">amanhã</strong>!</p>
 @else
-<p style="font-family:Arial,sans-serif;font-size:15px;color:#D1D5DB;line-height:1.6;margin:0 0 20px 0">Sua mensalidade do <strong style="color:#fff">BarberPro</strong> vence em <strong style="color:#DC2626">{{ $diasRestantes }} dias</strong>!</p>
+<p style="font-family:Arial,sans-serif;font-size:15px;color:#D1D5DB;line-height:1.6;margin:0 0 20px 0">Sua mensalidade do <strong style="color:#fff">StudioPro</strong> vence em <strong style="color:#DC2626">{{ $diasRestantes }} dias</strong>!</p>
 @endif
 
 <table width="100%" style="background:#000000;border:1px solid #1a1a1a;border-radius:6px;margin-bottom:24px">
@@ -35,7 +35,7 @@
 </td></tr>
 
 <tr><td style="padding:20px 28px;border-top:1px solid #1a1a1a;text-align:center">
-<p style="font-family:Arial,sans-serif;font-size:11px;color:#4B5563;margin:0">BarberPro — Sistema de Agendamento para Barbearias</p>
+<p style="font-family:Arial,sans-serif;font-size:11px;color:#4B5563;margin:0">StudioPro — Sistema de Agendamento para Barbearias</p>
 </td></tr>
 
 </table>

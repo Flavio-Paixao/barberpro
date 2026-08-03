@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="color-scheme" content="dark"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-  <title>{{ $tenant->nome }} — Super Admin BarberPro</title>
+  <title>{{ $tenant->nome }} — Super Admin StudioPro</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -90,7 +90,7 @@
 <nav>
   <div class="container">
     <div class="nav-inner">
-      <a href="/superadmin" class="nav-logo">BARBER<span>PRO</span></a>
+      <a href="/superadmin" class="nav-logo">STUDIO<span>PRO</span></a>
       <div class="breadcrumb"><a href="/superadmin">superadmin</a> / {{ $tenant->subdominio }}</div>
     </div>
   </div>
@@ -122,7 +122,7 @@
           <span class="badge badge-cancelado">Cancelado</span>
         @endif
       </div>
-      <p class="page-sub"><a href="https://{{ $tenant->subdominio }}.barberpro.tech" target="_blank">{{ $tenant->subdominio }}.barberpro.tech</a> · {{ $tenant->email }}</p>
+      <p class="page-sub"><a href="https://{{ $tenant->subdominio }}.studiopro.tech" target="_blank">{{ $tenant->subdominio }}.studiopro.tech</a> · {{ $tenant->email }}</p>
     </div>
     <a href="/superadmin" class="btn btn-outline btn-sm">← Voltar</a>
   </div>

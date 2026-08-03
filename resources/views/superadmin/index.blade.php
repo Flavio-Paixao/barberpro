@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="color-scheme" content="dark"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-  <title>Super Admin — BarberPro</title>
+  <title>Super Admin — StudioPro</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -83,7 +83,7 @@
 <nav>
   <div class="container">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">BARBER<span>PRO</span> <span class="nav-badge">Super Admin</span></a>
+      <a href="/" class="nav-logo">STUDIO<span>PRO</span> <span class="nav-badge">Super Admin</span></a>
       <div class="nav-actions">
         <span style="font-size:12px;color:#6B7280">{{ auth()->user()->name ?? 'Admin' }}</span>
         <form method="POST" action="/logout" style="margin:0">
@@ -99,7 +99,7 @@
 
   <div class="page-header">
     <h1 class="page-title">PAINEL <span>SUPER ADMIN</span></h1>
-    <p class="page-sub">// Gerencie todas as barbearias cadastradas no BarberPro</p>
+    <p class="page-sub">// Gerencie todas as barbearias cadastradas no StudioPro</p>
   </div>
 
   @if(session('success'))
@@ -152,7 +152,7 @@
           <td>
             <div class="tenant-name">{{ $tenant->nome }}</div>
             <div class="tenant-sub">
-              <a href="https://{{ $tenant->subdominio }}.barberpro.tech" target="_blank" class="tenant-link">{{ $tenant->subdominio }}.barberpro.tech</a>
+              <a href="https://{{ $tenant->subdominio }}.studiopro.tech" target="_blank" class="tenant-link">{{ $tenant->subdominio }}.studiopro.tech</a>
             </div>
           </td>
           <td>
