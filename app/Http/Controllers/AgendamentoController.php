@@ -8,11 +8,15 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 class AgendamentoController extends Controller
 {
-    public function index()
+    public function index(\Illuminate\Http\Request $request)
     {
+        $genero = $request->get('genero', 'masculino');
         $profissionals = Barbeiro::where('ativo', true)->get();
-        $servicos = Servico::where('ativo', true)->get();
-        return view('agendamento', compact('profissionals', 'servicos'));
+        $servicos = Servico::where('ativo', true)
+            ->where(function($q) use ($genero) {
+                $q->where('genero', $genero)->orWhere('genero', 'ambos');
+            })->get();
+        return view('agendamento', compact('profissionals', 'servicos', 'genero'));
     }
     public function horariosDisponiveis(Request $request)
     {
