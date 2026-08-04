@@ -163,7 +163,7 @@
 <nav>
   <div class="container">
     <div class="nav-inner">
-      <span class="nav-logo">BARBER<span class="pro">PRO</span></span>
+      <span class="nav-logo">STUDIO<span class="pro">PRO</span></span>
       <ul class="nav-links">
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#profissionals">Profissionals</a></li>
@@ -282,81 +282,6 @@
 <section id="servicos">
   <div class="container">
     <div style="text-align:center;margin-bottom:48px">
-      <div class="sec-badge">Nossos Serviços</div>
-      <h2 class="sec-title">O QUE <span>OFERECEMOS</span></h2>
-      <p class="sec-sub">Serviços premium para o homem moderno</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/></svg>
-        </div>
-        <div class="service-name">CORTE MASCULINO</div>
-        <div class="service-desc">Corte tradicional ou moderno com acabamento perfeito e finalização profissional.</div>
-        <div class="service-footer">
-          <div class="service-price">R$45</div>
-          <div class="service-time"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 30 min</div>
-        </div>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </div>
-        <div class="service-name">BARBA COMPLETA</div>
-        <div class="service-desc">Aparagem, modelagem e hidratação da barba com produtos premium importados.</div>
-        <div class="service-footer">
-          <div class="service-price">R$35</div>
-          <div class="service-time"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 25 min</div>
-        </div>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <div class="service-name">CORTE + BARBA</div>
-        <div class="service-desc">Combo completo com corte, barba e hidratação. O melhor custo-benefício da casa.</div>
-        <div class="service-footer">
-          <div class="service-price">R$70</div>
-          <div class="service-time"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 50 min</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="profissionals" style="background:var(--surface)">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:48px">
-      <div class="sec-badge">Nossa Equipe</div>
-      <h2 class="sec-title">NOSSOS <span>PROFISSIONALS</span></h2>
-    </div>
-    <div class="barbers-grid">
-      <div class="barber-card">
-        <div class="barber-avatar">CA</div>
-        <div class="barber-name">CARLOS ANDRADE</div>
-        <div class="barber-spec">Especialista em Degradê</div>
-        <div class="barber-stars">★★★★★ <span style="font-size:11px;color:var(--muted);margin-left:4px">4.9 (127)</span></div>
-        <div class="barber-tags"><span class="barber-tag">Degradê</span><span class="barber-tag">Moderno</span><span class="barber-tag">Navalhado</span></div>
-      </div>
-      <div class="barber-card">
-        <div class="barber-avatar">LM</div>
-        <div class="barber-name">LUCAS MARTINS</div>
-        <div class="barber-spec">Barba & Corte Clássico</div>
-        <div class="barber-stars">★★★★★ <span style="font-size:11px;color:var(--muted);margin-left:4px">4.8 (98)</span></div>
-        <div class="barber-tags"><span class="barber-tag">Barba</span><span class="barber-tag">Clássico</span><span class="barber-tag">Relaxamento</span></div>
-      </div>
-      <div class="barber-card">
-        <div class="barber-avatar">RS</div>
-        <div class="barber-name">RAFAEL SILVA</div>
-        <div class="barber-spec">Cortes Modernos</div>
-        <div class="barber-stars">★★★★★ <span style="font-size:11px;color:var(--muted);margin-left:4px">4.9 (143)</span></div>
-        <div class="barber-tags"><span class="barber-tag">Undercut</span><span class="barber-tag">Texturizado</span><span class="barber-tag">Moderno</span></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <div class="divider"></div>
 
@@ -412,7 +337,7 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <span class="footer-logo">BARBER<span class="pro">PRO</span></span>
+      <span class="footer-logo">STUDIO<span class="pro">PRO</span></span>
       <span style="font-size:11px;color:var(--muted)">Desenvolvido por <a href="http://portfolio-php-681892816208.s3-website-sa-east-1.amazonaws.com/" target="_blank" style="color:var(--accent-light);text-decoration:none">Flávio Paixão</a></span>
       <div style="display:flex;gap:20px">
         <a href="/termos" class="footer-link">Termos de Uso</a>
