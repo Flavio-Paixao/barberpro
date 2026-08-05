@@ -184,7 +184,7 @@
         <div class="hero-badge"><div class="badge-dot"></div> Agendamento Online 24h</div>
         <h1>
           <span class="glitch" data-text="AGENDE" style="color:var(--white)">AGENDE</span><br>
-          <span class="glitch" data-text="SEU CORTE" style="color:var(--accent-light)">SEU CORTE</span><br>
+          <span class="glitch" data-text="ATENDIMENTO" style="color:var(--accent-light)">ATENDIMENTO</span><br>
           <span class="glitch" data-text="ONLINE" style="color:var(--white)">ONLINE</span>
         </h1>
         <p class="hero-desc">Sem espera, sem ligação. Escolha seu profissional favorito, o horário ideal e receba confirmação instantânea no WhatsApp.</p>
