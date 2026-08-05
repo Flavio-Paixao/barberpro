@@ -142,7 +142,12 @@
         <thead><tr><th>Data</th><th>Horário</th><th>Cliente</th><th>WhatsApp</th><th>Profissional</th><th>Serviço</th><th>Valor</th><th>Status</th></tr></thead>
         <tbody>
           @foreach($agendamentos as $ag)
-          <tr>
+          @php
+            $generoServico = $ag->servico->genero ?? 'ambos';
+            $corLinha = $generoServico === 'feminino' ? 'rgba(236,72,153,0.08)' : ($generoServico === 'masculino' ? 'rgba(201,168,76,0.08)' : 'transparent');
+            $borderLinha = $generoServico === 'feminino' ? '#ec4899' : ($generoServico === 'masculino' ? '#C9A84C' : 'transparent');
+          @endphp
+          <tr style="background:{{ $corLinha }};border-left:3px solid {{ $borderLinha }}">
             <td>{{ $ag->data->format('d/m/Y') }}</td>
             <td style="color:var(--gold);font-weight:700">{{ $ag->horario }}</td>
             <td>{{ $ag->cliente_nome }}</td>
