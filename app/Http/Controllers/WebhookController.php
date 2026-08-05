@@ -64,7 +64,7 @@ class WebhookController extends Controller
                         ->update(['status' => 'confirmado']);
                     $whatsapp->enviarMensagem(
                         $agendamento->cliente_telefone,
-                        "✅ Agendamento *confirmado*!\n\nTe esperamos às *{$agendamento->horario}* com *{$agendamento->barbeiro_nome}*.\n\nAté logo! 😊"
+                        "✅ Agendamento *confirmado*!\n\nTe esperamos às *{$agendamento->horario}* com *{$agendamento->barbeiro_nome}*.\n\nAté logo! 😊\n\n⚠️ Número automático — não monitoramos outras mensagens."
                     );
                     Log::emergency("[Webhook] Confirmado: #{$agendamento->id}");
                 } elseif ($message === 'CANCELAR' || $message === '2') {
@@ -74,7 +74,7 @@ class WebhookController extends Controller
                         ->update(['status' => 'cancelado']);
                     $whatsapp->enviarMensagem(
                         $agendamento->cliente_telefone,
-                        "❌ Agendamento *cancelado*.\n\nTudo bem! Quando quiser agendar novamente é só acessar nosso link. 😊"
+                        "❌ Agendamento *cancelado*.\n\nTudo bem! Quando quiser agendar novamente é só acessar nosso link. 😊\n\n⚠️ Número automático — não monitoramos outras mensagens."
                     );
                     $telefoneTenant = Tenant::where('id', $tenant->id)->value('telefone');
                     if ($telefoneTenant) {

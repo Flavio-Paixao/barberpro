@@ -54,7 +54,8 @@ class WhatsAppService
         $mensagem .= "📅 Data: {$data}\n";
         $mensagem .= "⏰ Horário: {$horario}\n";
         $mensagem .= "📍 Local: " . ($endereco ?: env('BARBEARIA_ENDERECO', 'A confirmar')) . "\n\n";
-        $mensagem .= "Te esperamos! 💈";
+        $mensagem .= "Te esperamos! 😊\n\n";
+        $mensagem .= "⚠️ Este é um número automático. Responda apenas *1* (CONFIRMAR) ou *2* (CANCELAR) quando receber o lembrete.";
 
         return $this->enviarMensagem($telefone, $mensagem);
     }
@@ -82,7 +83,8 @@ class WhatsAppService
         $mensagem .= "✂️ {$servico} com {$barbeiro} às {$horario}\n\n";
         $mensagem .= "Responda:\n";
         $mensagem .= "1️⃣ CONFIRMAR\n";
-        $mensagem .= "2️⃣ CANCELAR";
+        $mensagem .= "2️⃣ CANCELAR\n\n";
+        $mensagem .= "⚠️ Número automático — não monitoramos outras mensagens.";
 
         return $this->enviarMensagem($telefone, $mensagem);
     }
